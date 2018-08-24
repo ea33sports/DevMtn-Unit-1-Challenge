@@ -16,7 +16,7 @@
             <objects>
                 <tableViewController id="9FE-o6-J4B" customClass="NotesTableViewController" customModule="Unit_1_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ffr-ie-3m2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -39,6 +39,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Notes" id="smY-kG-vfx">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="VIC-lv-WXy">
+                            <color key="tintColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="3HZ-qA-kuc" kind="show" identifier="addToNotesDetailVC" id="OQ2-WH-Bn5"/>
                             </connections>
@@ -54,25 +55,27 @@
             <objects>
                 <viewController id="3HZ-qA-kuc" customClass="NotesDetailViewController" customModule="Unit_1_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qf8-XF-aWR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yCK-lc-OFJ">
-                                <rect key="frame" x="37" y="94" width="300" height="30"/>
+                                <rect key="frame" x="37" y="30" width="300" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFN-Au-kgc">
-                                <rect key="frame" x="165" y="592" width="45" height="35"/>
+                                <rect key="frame" x="165" y="476" width="45" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Clear"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="0.92156862745098034" green="0.55294117647058827" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="clearButtonTapped:" destination="3HZ-qA-kuc" eventType="touchUpInside" id="APD-s6-MjU"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RFj-Yc-OUa">
-                                <rect key="frame" x="37" y="144" width="300" height="348"/>
+                                <rect key="frame" x="37" y="80" width="300" height="348"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="348" id="8gL-gp-npW"/>
@@ -81,7 +84,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.93115482233502533" green="0.93115482233502533" blue="0.93115482233502533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wFN-Au-kgc" firstAttribute="centerX" secondItem="Qf8-XF-aWR" secondAttribute="centerX" id="02a-pr-ygA"/>
                             <constraint firstItem="Kaf-CN-52w" firstAttribute="bottom" secondItem="wFN-Au-kgc" secondAttribute="bottom" constant="40" id="BTn-UT-o7B"/>
@@ -96,6 +99,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="XeQ-Gh-0ye">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="HA4-Su-JNM">
+                            <color key="tintColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="saveButtonTapped:" destination="3HZ-qA-kuc" id="aII-df-oja"/>
                             </connections>
@@ -114,9 +118,14 @@
         <scene sceneID="Ezz-0C-6JB">
             <objects>
                 <navigationController id="1Fh-gD-vnU" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jOf-cN-UkL">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="jOf-cN-UkL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.92156862745098034" green="0.55294117647058827" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.28627450980392155" green="0.28627450980392155" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="9FE-o6-J4B" kind="relationship" relationship="rootViewController" id="DuU-wp-qh6"/>
