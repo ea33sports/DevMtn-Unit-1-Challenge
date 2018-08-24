@@ -38,6 +38,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Notes" id="smY-kG-vfx">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="h9L-pa-MVu">
+                            <connections>
+                                <action selector="editButtonTapped:" destination="9FE-o6-J4B" id="TQG-1e-oCj"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="VIC-lv-WXy">
                             <color key="tintColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
